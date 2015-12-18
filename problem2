@@ -1,0 +1,18 @@
+//By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms. Answer=4613732
+
+var x = 1;
+var y = 2;
+fibArray = [1,2];
+while ((x+y) < 4000000) {
+  var z = x + y;
+  fibArray.push(z);
+  x = y;
+  y = z;
+}
+var sum = 0;
+for (i=0; i < fibArray.length; i++) {
+  if (fibArray[i] % 2 === 0){
+    sum += fibArray[i];
+  }
+}
+console.log(sum);
